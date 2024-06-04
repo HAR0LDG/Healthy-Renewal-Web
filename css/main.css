@@ -1,0 +1,1987 @@
+/*----Estilo general*/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  max-height: 100%;
+  font-family: 'Antic Slab', serif;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root{
+  --dark-blue:#022B3A;
+  --blue:#1F7A8C;
+  --light-blue:#BFDBF7;
+  --grey:#E1E5F2;
+  --white:#FFFFFF;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+}
+h1{
+  color: #022B3A;
+  font-size: 28px;
+}
+#imgbanner{
+  max-width: 100%;
+  height: auto;
+}
+section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Puedes ajustar la altura según tus necesidades */
+  background-color: #e0e0e0;
+}
+/*---------estilo Header*/
+.header-index{
+  padding: 0.2rem 1rem;
+  z-index: 0;
+  max-height: 100%;
+  background-color:var(--grey);
+} 
+#clic-menu{
+  display: none;
+}
+#clic-menu:checked ~ .items{
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+.nav-group label{
+  cursor: pointer;
+  border-radius: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+.items{
+  margin-top: 1rem;
+  grid-area: items;
+  display: none;
+}
+.inside-tablet{
+  display: none;
+}
+.item, .item-tablet{
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.nav-group{
+  margin:0.8rem 0  0.8rem;
+  display: grid;
+  align-items: center;
+  grid-area: headerindex;
+  text-align: center;
+  grid-template-areas:
+  "one-nav one-nav three-nav"
+  "items items items";
+}
+.search-home{
+  display: flex;
+}
+.search-home input{
+  width: 100%;
+  padding: 0.5rem 1.3rem;
+  border-radius: 20px 0px 0px 20px;
+  border: none ;
+  outline: none;
+}
+.search-home input:focus{
+  box-shadow: 0 0 5px rgba(80, 74, 74, 0.3);
+}
+.search-home input[placeholder]{
+  font-weight: 600;
+  font-family: 'Antic Slab', serif;
+  letter-spacing: 0.2px;
+}
+.search-home button{
+  padding: 0.1rem 1rem;
+  cursor: pointer;
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  border-left: 1px solid rgba(69, 45, 128, 0.11) ;
+  color:var(--dark-blue);
+  font-weight: bold;
+  font-family: 'Suez One', serif;
+}
+.search-hidden{
+  display: none;
+  border-right: 2px solid #FFFFFF;
+
+}
+.creardos{
+  text-decoration: none;
+  color: #022B3A;
+}
+
+.search-hidden button{
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  border-left: 1px solid rgba(69, 45, 128, 0.11) ;
+  color:var(--dark-blue);
+  font-weight: bold;
+  font-family: 'Suez One', serif;
+}
+.search-hidden input{
+  padding: 5.3px 15px; 
+  border-radius: 10px 0px 0px 10px;
+  border: none ;
+  outline: none;
+  width: 80%;
+  background-color:var(--white);
+}
+.one-nav, .one-nav img{
+  grid-area: one-nav;
+  width: 300px;
+}
+.three-nav{
+  display: flex;
+  justify-self: flex-end;
+  grid-area: three-nav;
+  font-size: 35px;
+  padding: 0.3em;
+  color: var(--dark-blue);
+}
+.three-nav:hover{
+  color: var(--blue);
+}
+.four-nav{
+  grid-area: four-nav;
+}
+.five-nav{
+  grid-area:five-nav;
+}
+.six-nav{
+  grid-area: i5;
+}
+.seven-nav, .crear{
+  grid-area: seven-nav;
+  padding: 5px;
+  border-style: none;
+}
+.crear,
+.four-nav,
+.five-nav,
+.six-nav,
+.seven-nav{
+  background-color: var(--grey);
+  color:var(--dark-blue);
+  border-bottom: 2px solid white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.crear:hover,
+.four-nav:hover,
+.five-nav:hover,
+.six-nav:hover,
+.seven-nav:hover{
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+.buttons-mobile{
+  margin: 1px;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-around;
+   background-color: var(--grey); 
+
+}
+.buttons-tablet{
+  margin: 1rem;
+  width: 60%;
+  display: none;
+  
+}
+.styleButtonTablet{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.In a, .In{
+  text-align: center;
+  background-color: var(--white);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--dark-blue);
+  text-shadow: 2px 2px 5px #b8bdc2;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.In a:hover, .In:hover{
+  background-color: var(--dark-blue);
+  text-shadow: 2px 2px 5px #022B3A;
+  color: var(--white);
+  transform: translateY(2px);
+}
+.Up a, .Up{
+  background-color: var(--dark-blue);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--white);
+  text-shadow: 2px 2px 5px #022B3A;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.Up a:hover, .Up:hover{
+  background-color: var(--white);
+  color: var(--dark-blue);
+  text-shadow: 2px 2px 5px #b8bdc2;
+  transform: translateY(2px);
+}
+.sign{
+  font-family: 'Suez One', serif;
+  padding: 0.5rem;
+  width: 45%;
+  border-radius: 8px;
+  border: 0.5px solid #E1E5F2;
+  box-shadow: 2px 2px 5px #b8bdc2;
+}
+/*Estilos Contenido Index*/
+.container-index{
+  margin: 1rem 0rem;
+}
+.invite-information{
+  background-image: linear-gradient(hsla(0,0%,100%,.642),hsla(0,0%,100%,.642)),url(../img/people-index.png);
+  background-size: cover;
+  margin:0rem 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invite-information h2{
+  font-family: 'Suez One', serif;
+  padding: 1rem;
+  text-align: center;
+
+}
+.invite-information p{
+  font-family: 'Antic Slab', serif;
+  padding: 1rem;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.18px;
+}
+.start-button{
+  background-color: var(--dark-blue);
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 50px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+.start-button:hover{  
+  background-color: #fff;
+  color:#022B3A;
+  transform: translateY(2px);
+}
+.image-index{
+  display: none;
+}
+/*-----Estilos footer index---*/
+.container-footer{
+  background-color: var(--grey);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem;
+}
+.container-footer a, .container-footer p{
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-size:15px;
+}
+.container-footer h2{
+  color: var(--dark-blue);
+  font-size: 19px;
+  padding-top: 0.5rem;
+}
+.footer-logo img{
+  width: 170px;
+  height: 45px;
+  padding-top: 8px;
+}
+.company-section-footer{
+  color: var(--dark-blue);
+}
+.list-information-footer{
+  list-style-type:none;
+}
+#informacion{
+  font-size: 25px;
+}
+.list-company-footer, .list-information-footer, .list-social-networking{
+  padding: 1rem;    
+}
+#tituloSiguenos {
+  padding-bottom: 20px;
+  padding-top: 6px;
+  font-size: 25px;
+}
+.list-social-networking i, .list-social-networking a{
+  color: var(--dark-blue);
+  padding: 0px 3px;
+  font-size: 30px;
+}
+.facebook-icon{
+  margin-left: 10px;
+}
+.imgredes{
+  max-width: 100%;
+   height: 65px;
+   padding: 10px;
+}
+/*Estilos formulario Login*/
+.login-form{
+  background-color: #FFFFFF;
+  border: 0.5px solid #E1E5F2;
+  border-radius: 10px;
+  box-shadow:3px 0px 30px rgba(163,163,163, 0.4);
+  margin:2rem auto;
+  padding:2rem 3rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;  
+}
+.labelemail{
+  width: 100%;
+  display: block;
+	font-weight: bolder;
+	padding: 10px 0px;
+	min-height: 40px;
+	cursor: pointer;
+	color:#022B3A;
+	text-shadow: 0.8px 0.5px 1px var(--dark-green);
+}
+.input-email{
+  width: 100%;
+	background-color:#E1E5F2;
+	border-radius: 10px;
+	height: 45px;
+	margin-bottom:1rem;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+	border: 3px solid transparent;
+}
+.input-email:focus {
+  border: 3px solid black;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+.buttonLog{
+  height: 45px;
+	line-height: 45px;
+	width:100px;
+	margin-top:2rem;
+	background:  #022B3A;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #E1E5F2;
+	box-shadow:3px 0px 30px rgba(163,163,163, 0.4);
+	border-radius: 20px;
+	cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.buttonLog:hover{
+  background:  #fff;
+	color: #022B3A;
+  transform: translateY(2px);
+}
+.t-form{
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px var(--dark-blue);
+}
+.login-up{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.login-up img{
+  height: 40px;
+  margin-left: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+/*Estilos desplegable menucito Usuario*/
+.aqui{
+  position: absolute;
+  right: 4.3rem;
+  top: 15px;
+}
+.aqui .two-nav{
+  border-radius: 50px;
+}
+.aqui li{
+  list-style: none;
+}
+.two-nav a:hover {
+  background-color:var(--grey);
+}
+.two-nav li a:hover {
+  background-color:#022b3acc;
+  color: #FFFFFF;
+}
+.aqui li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+  list-style: none;
+}
+.aqui li:hover > ul {
+    display:block;
+}
+.aqui a{
+  text-decoration: none;
+  background-color: var(--grey);
+  color:#022B3A;
+  padding:10px 12px;
+  display:block;
+}
+.aqui .two-nav img {
+  border-radius: 50px;
+  background-color: pink;
+  width: 35px;
+  height: 35px;
+}
+.log-user img{
+  width: 180px;
+}
+.log-user{
+  justify-self: start;
+  display: flex;
+  justify-content: flex-start;
+}
+/*Ficha antropométrica*/
+#general1{
+  padding: 1rem;
+}
+#tituloGeneral1{
+  text-align: center;
+  padding: 10px;
+}
+#sup, #inf{
+  padding: 0.1rem 0.5rem ;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.div-ficha{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 10px;
+}
+.input-ficha{
+  display: flex;
+  flex-direction: column;
+}
+.div-foto img{
+  width: 150px;
+  border-radius:150px;
+}
+.input-ficha label{
+  margin-top: 10px;
+  font-weight: bold;  
+  color: #022B3A;  
+}
+.input-ficha input{
+  border: none; /* Borde del campo de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  background-color:#E1E5F2; /* Color de fondo */
+  outline: none; /* Quita el resaltado al hacer clic en el campo */
+  /* Ocupar el ancho completo de su contenedor */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+ .divBoton input{
+  background-color: var(--dark-blue);
+  color: #fff; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  padding: 10px 50px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+.divBoton a:hover{
+  background-color: #fff;
+  color:#022B3A;
+  transform: translateY(2px);
+}
+.divBoton a:active{
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  color: #022B3A;
+  font-weight: bold;
+}
+.divBoton{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cancelButton{
+  background-color: var(--dark-blue);
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 50px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+#cancelButton:hover{
+  background-color: #fff;
+  color:#022B3A;
+  transform: translateY(2px);
+}
+/*Actualizar Ficha antropometrica*/
+#cuadroExteriorActFicha{
+  background-color: #E1E5F2;
+  margin: 1rem;
+}
+#tituloActFicha{
+  padding: 1rem;
+  text-align: center;
+}
+#divGeneral{
+  padding: 1rem;
+  
+}
+.campoBlanco{
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 1rem;
+}
+.campoBlanco label, .label-newf label,.label-inf-newf label{
+  display: flex;
+  margin-bottom: 7px;
+  font-weight: bold;  
+  color: #022B3A;  
+}
+.campoBlanco input,
+.campoBlanco select, .label-newf input,.label-inf-newf input, .label-inf-newf select{
+  border: none; /* Borde del campo de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  background-color:#E1E5F2; /* Color de fondo */
+  outline: none; /* Quita el resaltado al hacer clic en el campo */
+  width: 100%; /* Ocupar el ancho completo de su contenedor */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.campoBlanco input:focus,
+.campoBlanco select:focus, .label-newf input:focus,.label-inf-newf:focus {
+  border: 1px solid #022B3A;
+}
+.campito{
+  margin: 2px;
+}
+#label-actualizar,
+#input-actualizar{
+  width: 100%;
+}
+.update-one-div{
+  background-color: white;
+  padding: 1rem;
+}
+#okButton{
+  text-align: center;
+  background-color: var(--white);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--dark-blue);
+  text-shadow: 2px 2px 5px #b8bdc2;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#okButton:hover{
+  background-color: var(--dark-blue);
+  text-shadow: 2px 2px 5px #022B3A;
+  color: var(--white);
+  transform: translateY(2px);
+}
+.buttons-update{
+  align-self: center;  
+}
+.buttons-update input{
+  margin: 5px 1rem ;
+}
+/*Actualizar datos*/
+#tituloActualizarDatos{
+  margin-top: 1rem;
+  text-align: center;
+}
+.formUpd{
+  margin-bottom: 1.5rem;
+  width: 85%;
+}
+#section-registro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenedorDatos{
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 1rem;
+  background-color:#e1e5f29b;
+}
+.campoDatos {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.campoDatos label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;  
+  color: #022B3A;  
+}
+.campoDatos input{
+  border: none; /* Borde del campo de texto*/
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  background-color:#E1E5F2; /* Color de fondo */
+  outline: none;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.campoDatos input:focus{
+  border: 1px solid #022B3A;
+}
+#divBotonesDatos{
+  margin-top: 1.5rem;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+#btnEliminarDatos{
+  width: 150px;
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: #fd0101;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#btnEliminarDatos:hover {
+  background-color: #a10303;
+  transform: translateY(2px);
+}
+#btnEliminarDatos:active {
+  background-color: aliceblue;
+  transform: translateY(0);
+}
+#btnCancelarDatos{
+  width: 150px;
+  text-align: center;
+  padding: 0.4rem;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  color: #022B3A;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#btnCancelarDatos:hover {
+  background-color: #fff;
+  transform: translateY(2px);
+}
+#btnCancelarDatos:active {
+  background-color: #022B3A;
+  color: #fff;
+  transform: translateY(0);
+}
+#btnAceptarDatos{
+  width: 150px;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #022B3A; 
+  color: #fff; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#btnAceptarDatos:hover{
+  background-color: #022B3A;
+  transform: translateY(2px);
+}
+#btnAceptarDatos:active{
+  background-color: #fff;
+  color: #022B3A;
+  transform: translateY(0);
+}
+/*Registro cuenta*/
+.formReg{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
+.contenedorCuenta {
+  width: 90%;
+  background-color:#fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  place-items: center;
+  white-space: nowrap;
+  margin-top: 1rem; 
+  padding-bottom: 10px;   
+}
+.campoCuenta {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 80%;
+}
+.campoCuenta label {
+  display: block;
+  text-align: left;
+  margin-bottom: 7px;
+  font-weight: bold;  
+  color: #022B3A;  
+}
+.campoCuenta select{
+  text-align: center;
+}
+.campoCuenta input,
+.campoCuenta select{
+  border: none; /* Borde del campo de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  background-color:#E1E5F2; /* Color de fondo */
+  outline: none; /* Quita el resaltado al hacer clic en el campo */
+  width: 100%; /* Ocupar el ancho completo de su contenedor */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.campoCuenta input:focus,
+.campoCuenta select:focus{
+  border: 1px solid #022B3A;
+}
+#lblTerminosCuenta{
+  font-weight: bold;
+  color: #022B3A;
+  cursor: pointer;
+  padding: 20px;
+}
+#cbAceptoTerminosCuenta{
+  transform: scale(1.3);
+  margin-right: 10px;
+}
+#btnAceptarCuenta{
+  cursor: pointer;
+  background-color: #022B3A; 
+  color: #fff; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  padding: 10px 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#btnAceptarCuenta:hover{
+  background-color: #022B3A;
+  transform: translateY(2px);
+}
+#btnAceptarCuenta:active{
+  background-color: #fff;
+  color: #022B3A;
+  transform: translateY(0);
+}
+#section-registro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem; 
+}
+.ultRegistro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*Nueva Ficha Antropométrica*/
+.container-home{
+  display: flex;
+  flex-direction: column;
+}
+.cont-newf{
+  margin: 1rem 0rem;
+  background-color:var(--grey);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+.cont-newf h1{
+  text-align: center;
+}
+.cont-sup-newf,.cont-inf-newf{
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: white;
+}
+.fa-question{
+  background-color: #022B3A;
+  color: white;
+  margin-left:5px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  padding-top:4px;
+  cursor: pointer;
+}
+.fisAct-text{
+  background-color: #022B3A;
+  color:white;
+  padding:3px;
+  width: 250px;
+  height: 65px;
+  position: relative;
+  left: 20px;
+  bottom: 50px;
+  text-transform: lowercase;
+  line-height: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  visibility: hidden;
+  font-size: 7px;
+}
+.fa-question:hover > p{
+  visibility: visible;
+}
+.cont-izq-newf, .cont-der-newf{
+  border-radius: 10px;
+}
+.buttons-newf{
+  display: flex;
+  justify-content: center;
+}
+.buttons-newf input{
+  background-color: var(--dark-blue);
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 50px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+.buttons-newf input:hover{
+  background-color: #fff;
+  color:#022B3A;
+  transform: translateY(2px);
+}
+#btn-confirm{
+  background-color: #022B3A;
+  color: white;
+  font-weight:bold;
+  border: 1px solid var(--grey);
+}
+#btn-cancel{
+  background-color: white;
+  color: #022B3A;
+  font-weight:bold;
+  border: 1px solid #c1c9cb; 
+}
+/*Contenedor Form de ficha antropométrica*/
+/*contenedor Form de Actualizar ficha antropométrica*/
+.cont-ficha{
+  margin: 1rem 0rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+ /*Ver planes*/
+.cont-verplanes{
+  margin: 1rem;
+  border: 2px solid rgb(210, 202, 202);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.trainer{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/trainer.png');
+  background-size: cover;
+  background-position: center; 
+  width: 80%;
+  height: 200px;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 2px solid rgb(174, 169, 169);
+  border-radius: 15px;
+}
+.trainer a, .plan-nutricional a{
+  text-decoration: none;
+  padding: 1rem;
+  background-color: var(--light-blue);
+  color:var(--dark-blue);
+  font-weight: bold;
+  width: 100%;
+  border-radius: 10px;
+}
+.plan-nutricional{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/nutrition.png');
+  background-size: cover;
+  background-position: center; 
+  background-color: lightblue;
+  width: 80%;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 2px solid rgb(174, 169, 169);
+  border-radius: 15px;
+}
+/*Plan nutricional*/
+.cont-planutri{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Plan_nutricional/nutrition.png');
+  background-size: cover;
+  background-position: center; 
+  padding: 2rem;
+  height: 100%;
+}
+.cont-planutri h1{
+  text-align: center;
+  color: white;
+}
+.table-planutri{
+  background-color: white;
+}
+/*Entrenamiento Fisico*/
+.cont-trainer{
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.cont-trainer h1{
+  text-align: center;
+}
+.text-trainer{
+  margin: 1rem;
+  padding: 1.5rem;  
+}
+.img-t1{
+  width: 100%;
+}
+.trainer-div{
+  padding: 1rem;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.img-order{
+  order:2;
+}
+.txt-t2{
+  order:1;
+}
+/*Qué es ficha antropometrica*/
+.mean-ficha{
+  border: 1px solid lightblue;
+  background-image:linear-gradient(rgba(244, 239, 239, 0.759), rgba(230, 224, 224, 0.725)), url('../img/img-meanf.png');
+  background-size: cover;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+}
+.mean-ficha h1{
+  text-align: left;
+  margin: 1rem;
+}
+.par-meanf p{
+  padding: 1.5rem;
+}
+.img-meanf{
+  display: none;
+  margin-top: 1rem;
+}
+.img-meanf img{
+  width: 100%;
+}
+/*Información planes*/
+.info-planes{
+  margin: 1rem;
+  padding: 1rem;
+}
+.info-planes h1, .if-text p{
+  margin: 1rem;
+}
+.if-imgs{
+  padding: 1rem;
+  display: flex;
+}
+.if-imgs img{
+  width: 100%;
+}
+.img-one-if{
+  width: 50%;
+  position: relative;
+  left: 3rem;
+}
+.img-two-if{
+  position: relative;
+  display: flex;
+  align-items: end;
+  right: 3rem;
+  width: 50%;
+}
+/* in y upheader*/
+.idx-in-show{
+  display: none;
+}
+/*Eliminar cuenta*/
+#tituloEliminarCuenta{
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 22px;
+}
+.formDel{
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Centra verticalmente el contenido */
+}
+.contenedorExterior{
+  margin: 2rem 1.5rem;
+}
+.contenedorInterno{  
+  text-align: center; /* Alinea el contenido del div al centro horizontalmente */
+  background-color: #e1e5f298;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);    
+}
+.campoElim {
+  box-sizing: border-box;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+  flex-direction: column;   
+}
+.campoElim label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;  
+  color: #022B3A;  
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+.campoElim input{
+  border: none; /* Borde del campo de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  background-color:#E1E5F2; /* Color de fondo */
+  outline: none; /* Quita el resaltado al hacer clic en el campo */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.campoElim input:focus{
+  border: 1px solid #022B3A;
+}
+#divBotonesElim{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+.table-admon{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 1rem;
+}
+.contadmon-div{
+  margin: 2px;
+  width: 100%;
+}
+.contimp-admon{
+  width: 80%;
+}
+.label-admon{
+  padding: 10px;
+}
+.input-admon{
+  width: 90%;
+	background-color:#E1E5F2;
+	border-radius: 10px;
+	height: 35px;
+	margin-bottom:1rem;
+	line-height: 45px;
+	padding:10px;
+	transition: .3s ease all;
+  margin-top: 10px;
+	border: 1px solid #d4d6dc;
+}
+.button-contadmon{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.button-admon{
+    background-color: var(--dark-blue);
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 50px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+.button-admon:hover{
+  background-color: #fff;
+  color:#022B3A;
+  transform: translateY(2px);
+  cursor: pointer;
+  border: solid 1px;
+}
+/*Listar Usuarios admon*/
+.searchlist-admon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mauro-uno{
+  font-size: 14px;
+}
+.class-search{
+  margin: 1rem;
+}
+.class-search input{
+  padding: 8px 10px;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2a3;
+}
+.cont-maurotres select{
+  padding: 8px 10px;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2a3;
+}
+.sectionlist-admon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border: solid 1px #a2a2a2;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+.casillas-admon{
+  width: 85%;
+  margin: 3px;
+  padding:10px 0px 10px 30px;
+  border: solid 1px #a2a2a2;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.formlist-admon{
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.th-admon, .td-admon{
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 5px;
+}
+th {
+  background-color: #f2f2f2;
+}
+#btnAdmon{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#btnAdmon a{
+  margin: 0px 20px 0px 0px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #022B3A; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+#btnAdmon a:hover{
+  background-color: #022B3A;
+  transform: translateY(2px);
+}
+#btnAdmon a:active{
+  background-color: #fff;
+  color: #022B3A;
+  transform: translateY(0);
+}
+.btndel-admon{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: red; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+/*Prueba*/
+.crear{
+  text-decoration: none;
+}
+/*Paginación*/
+.insformPage-1{
+  border: solid 1px #cfcfcf;
+  border-radius: 8px;
+  margin: 20px;
+}
+.cont-page{
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  margin: 5px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.cont-page label{
+   width: 30%;
+   font-size: 18px;
+}
+.mm-select{
+  margin: 5px;
+  width: 90%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.select-1{
+  width: 20%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #E1E5F2;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cont-page input{
+  border: none; /* Borde del campo de texto */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  background-color:#E1E5F2; /* Color de fondo */
+  outline: none; /* Quita el resaltado al hacer clic en el campo */
+  width: 100%; /* Ocupar el ancho completo de su contenedor */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  margin: 5px;
+}
+.cont-page input:focus{
+  border: 2px solid #022B3A;
+}
+.cont-page .boton-limpiar{
+  background-color: #022B3A;
+  width: 30%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-weight:bold ;
+}
+.boton-pagina{
+  background-color: #022B3A;
+  width: 30%;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight:bold ;
+  color: white;
+}
+.cont-page .boton-limpiar:hover{
+  background-color: #04455c;
+  transform: translateY(2px);
+}
+.boton-pagina:hover{
+  background-color: #04455c;
+  transform: translateY(2px);
+}
+.table-page{
+  margin: 20px;
+}
+.form-pag input{
+  padding: 8px 10px;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2a3;
+}
+.input-regpag select{
+  padding: 8px 10px;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2a3;
+}
+.titulos-pag{
+  border: 1px solid #b3b1b1;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.success{
+  width: 100%;  
+}
+.success th{
+  padding: 10px 5px;
+  font-size: 15px;
+  border: 1px solid #b3b1b1;
+}
+.success td{
+  font-size: 13px;
+  border: 1px solid #b3b1b1;
+  padding: 10px 5px;
+}
+/*----------------------------------
+Fin diseño responsive general, inicio media queries
+------------------------------------*/
+@media (max-width: 768px ){
+
+    /*Actualizar datos*/
+    .contenedorDatos{
+        grid-template-columns: repeat(1,1fr);
+        overflow-x: auto;
+        white-space: nowrap;
+    }  
+    .campoDatos{
+        padding: 5px;
+    }
+    #divBotonesDatos{
+      flex-direction: column;
+      align-items: center;
+    }    
+    #divBotonesDatos > input{
+        margin-right: 0;
+    }
+    #btnAceptarDatos{
+        order:1;
+    }
+    #btnCancelarDatos{
+        order:2;
+    }
+    #btnEliminarDatos{
+        order:3;
+    }
+     /*Registro cuenta*/
+     .contenedorCuenta{
+      grid-template-columns: repeat(1,1fr);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .campoCuenta{
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:768px){
+  /*Iniciar sesión*/
+  .login-form{
+    width: 60%;
+  }
+  /*elimian cuenta*/
+  #divBotonesElim{
+    flex-direction: row;
+  }
+  /*Actualizar datos*/
+  .formUpd{
+    width: 70%;
+  }
+  #divBotonesDatos{
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+ }
+  /*Logo in y up*/
+  .idx-in{
+    display: none;
+  }
+  .idx-in-show{
+    display: unset;
+    width: 200px;
+    position: relative;
+    top: 2rem;
+  }
+  .idx-in img{
+    position: relative;
+  }
+  /*Información planes*/  
+  .if-continf{
+    display: flex;
+  }
+  .if-text{
+    width: 100%;
+    padding: 0rem 2rem;
+  }
+  .info-planes{
+    margin: 2rem;
+  }
+  .info-planes h1{
+    margin: 2rem 3rem;
+  }
+  .if-imgs{
+    height: 250px;
+  }
+  .img-one-if{
+    width: 50%;
+    position: relative;
+    left: 3rem;
+    bottom: 1rem;
+  }
+  .img-two-if{
+    position: relative;
+    display: flex;
+    align-items: end;
+    right: 3rem;
+    top: 1.5rem;
+    width: 50%;
+  }
+  /*Qué es Ficha antropometrica*/
+  .mean-ficha{
+    background-image:linear-gradient(rgba(244, 239, 239, 0.686), rgba(230, 224, 224, 0.5)), url('../img/img-meanf.png');
+    margin: 2rem 5rem;
+  }
+  .mean-ficha h1{
+    margin: 2rem 0rem 0rem 3rem;
+  }
+  .cont-meanf{
+      display: flex;
+      margin: 2rem;      
+  }
+  .par-meanf{
+    width: 60%;
+  }
+  .img-meanf{
+    display: none;
+    align-items: flex-end;
+  }
+  .img-order{
+    order:1;
+  }  
+  .txt-t2{
+    order:2;
+  } 
+  .container-index{
+      width:100% ;
+      display: grid;
+      grid-template-areas: 
+      "headerindex";
+  }
+  .header-index{
+      justify-content: space-around;
+      display: flex;
+  }
+  .buttons-mobile{
+      display:none;
+  }
+  .nav-group{
+      width: 45%;
+  }
+  .one-nav{
+      margin-left: 1rem;
+  }
+  .buttons-tablet{
+      display:unset;
+  }
+  .styleButtonTablet{
+      display: flex;
+      justify-content: space-around;
+  }
+  .items{
+      visibility: hidden;
+      display: block;
+      display: flex;
+      justify-content: flex-end;
+  }  
+  .inside-tablet{
+      margin: 2px;
+      padding: 0.5rem 0.2rem;
+      display: unset;
+      display: grid;
+      background-color: var(--grey);
+      grid-template-areas: 
+      "buscador position-one position-two";
+  }
+  .nav-group label{
+      display: none;
+  }
+  .nav-group{
+      display: grid;
+      grid-area: header-index;
+      text-align: center;
+      align-items: center;
+      grid-template-areas:
+      "one-nav items";    
+  }
+  .creardos,
+  .four-nav,
+  .five-nav,
+  .six-nav,
+  .seven-nav{
+      background-color: var(--purple-color);
+      color: var(--purple-color);
+      width: 100px;
+      text-decoration: none;
+      font-weight: 0;
+      margin-bottom: 3px;
+  }
+  .search-home{
+      padding: 2px;
+      display: none;
+  }
+  .search-home input{
+      margin-top: 5px;
+      width: 60%;
+      padding: 0.13rem 1rem;
+  }
+  .search-home button{
+      padding: 0.1rem 0.5rem;
+      height: 19px;
+  }
+  .search-hidden, .creardos{
+      grid-area: buscador;
+      display: unset;
+      padding: 0;
+      text-align: center;
+      padding-top: 5px;      
+  }
+  .crear{
+    display: none;
+  }
+  .position-one{
+      grid-area: position-one;
+      text-align: center;
+      border-left: 2px solid #FFFFFF;
+      border-right: 2px solid #FFFFFF;
+      color: var(--dark-blue);
+  }
+  .creardos{
+    text-align: center;
+      color: var(--dark-blue);
+      width: 100%;
+  }
+  .position-two{
+      grid-area: position-two;
+      text-align: center;
+      color: var(--dark-blue);
+  }
+  /*Estilos Contenido Index media query*/
+  .invite-information{
+    align-items:flex-start;
+  }
+  .invite-information h2, .invite-information p{
+      width: 85%;
+  }
+  .invite-information h2{
+      font-size: 30px;
+      text-align: start;
+  }
+  .invite-information p{
+      font-size: 17px;
+      text-align: justify;
+  }
+  /*Estilos footer media query*/
+  .container-footer{
+    flex-direction: row;
+    justify-content:space-evenly;
+  }
+  .imgredes{
+    width:auto;
+  }
+  /*Estilos menucito usuario*/
+  .aqui .two-nav img {    
+    width: 50px;
+    height: 50px;
+  }
+  .log-user{
+    display: flex;
+    justify-self: start;
+  }
+  .log-user img{
+    width: 350px;
+  }
+  .nav-group-perfil{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  /*Ficha antropometrica 768query*/
+  .div-foto{
+    margin-right: 15px;
+  }
+  #sup, #inf{
+      flex-direction: row;
+      padding: 1rem;
+  }
+  .div-ficha{
+      align-self: baseline;
+      width: 22.5%;
+  }
+  .input-ficha label{
+      font-size: 10px;
+  }
+  /*Actualizar Ficha antropometrica*/ 
+  .campoBlanco{
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    padding: 0rem;
+  }
+  .izq{
+    border-top-left-radius: 15px;
+    border-top-right-radius:15px;
+    width: 50%;
+    margin: 5px 2px 0px 2px;
+  }
+  .izq-two{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0px 2px 2px 2px;
+  }
+  #label-two-version{
+    width: 100%;
+  }
+  .der{
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    width: 50%;
+    margin: 2px 2px 0px 2px;    
+  }
+  .der-two{
+    width: 50%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px;
+    margin: 0px 2px 2px 2px;
+  }  
+  .update-one-div{
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+  .center-div-update{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  } 
+  .corners-up{
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+  }
+  .corners-down{
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+  }  
+  .label-two-version{
+    width: 35%;
+  }
+  .label-different{
+    width: 60%;
+  }
+  /*Nueva Ficha Antropométrica*/  
+  .cont-newf{
+    background-color:var(--grey);
+    border-radius: 15px;  
+  }
+  .cont-newf h1{
+    text-align: center;
+  }  
+  .cont-sup-newf{
+    display: flex;
+    justify-content: center;
+    background-color: var(--grey);
+    margin: 0px;
+    border-radius: 15px;
+  }
+  .cont-inf-newf{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+  }  
+  .cont-der-newf, .cont-izq-newf{
+    background-color: white;
+    padding: 1rem;
+    width: 45%;
+    border-radius:15px;
+    margin: 5px;
+  }  
+  .cont-intern-newf{
+    background-color: white;
+  }
+  /*ver planes*/
+  .cont-verplanes{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .trainer, .plan-nutricional{
+    height: 250px;
+    margin: 0rem 1rem;
+    width: 40%;
+  }  
+  /*Entrenamiento fisico*/
+  .trainer-div{
+    display: flex;
+    flex-direction: row;
+  }
+  .text-trainer{
+    width: 50%;    
+  }
+  /*Vista Admon Listar usuarios*/
+  .sectionlist-admon{
+    flex-direction: row;
+    align-items: first baseline;
+    font-size: 10px;
+  }
+  .casillas-admon{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 2px;
+    height: 50px;
+  }
+  /*Paginación*/
+  .cont-page{
+    width: 60%;
+  }
+  .mm-select{
+    width: 60%;
+  }  
+}
+
+@media screen and (min-width:1024px) {
+  .container-footer{
+    flex-direction: row;
+    justify-content:space-evenly;
+  }
+  .login-form{
+    width: 45%;
+    margin-bottom: 175px;
+  }
+  /*Eliminar cuenta*/
+  .formDel{
+    width: 45%;
+  }
+  #eliminar{
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  /*Logo in y up*/
+  .idx-in-show img {
+  width: 500px;
+  }
+  .idx-in-show{
+    top:1.4rem;
+    right: 5rem;
+  }
+  /*otras cosas*/
+  .container-index{
+      display: flex;
+      margin: 2rem 0rem;
+      margin-bottom: 210px;
+      padding-top: 130px;
+  }
+  .invite-information{
+      background-image: none;
+      width: 60%;
+      padding-bottom: 22px;
+  }
+  .invite-information h2, .invite-information p{
+      width: 100%;
+  }
+  .image-index{
+      display: unset;
+      width: 35%;
+      margin:3rem;
+      background-image: url('../img/people-index.png');
+      background-size: cover;
+  }
+  .log-user{
+    margin-left: 1rem;
+  }
+  /*Ficha antropometrica 1024query*/
+  .div-ficha{
+    width: 80%;    
+  }
+  .input-ficha label{
+      font-size: 15px;
+  }
+  #general1{
+    padding-bottom: 45px;
+  }
+  /*Nueva Ficha Antropometrica*/
+  .container-home{
+    padding-top: 30px;
+    padding-bottom: 18px;
+  }  
+  .cont-intern-newf{
+    display: flex;
+    justify-content: space-around;
+  }
+  .cont-inf-newf{
+    width: 95%;
+  }
+  .cont-der-newf, .cont-izq-newf{
+    width: 50%;
+  }
+  .label-newf{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .label-inf-newf label{
+    margin-top: 10px;
+  }
+  .label-inf-newf{
+    width: 30%;
+  }  
+  /*Entrenamiento fisico*/
+  .text-trainer p, .text-trainer img{
+    padding: 1rem;
+  }
+  /*Registro cuenta*/  
+  .contenedorCuenta{
+    width: 65%;
+  } 
+  #section-registro{
+    padding-bottom: 10px;
+  }
+  /*Qué es  ficha antropometrica*/
+  .mean-ficha{
+    background-image: none;
+    margin-bottom: 65px;
+  }
+  .img-meanf{
+    display:unset;
+    margin-top: 1rem;
+  }
+  .info-planes{
+    margin-bottom: 220px;
+  }
+  /*Vista Admon Listar usuarios*/
+  .sectionlist-admon{
+    margin: 1rem;
+    font-size: 13.5px;
+    flex-direction: row;
+  }
+  .casillas-admon{
+    padding: 2px;
+    height: 80px;
+  }    
+ /*VerPlanes*/
+  .cont-verplanes{
+    padding-top: 150px;
+    padding-bottom: 148px;
+  }
+  /*Plan nutricional*/
+  .cont-planutri{
+    padding-bottom: 285px;
+  }
+}
