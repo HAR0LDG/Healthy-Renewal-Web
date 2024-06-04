@@ -63,7 +63,7 @@ require_once ('modelo/conexion.php');
 				Nos gusta que te sientas bien y hemos desarrollado una metodología de ayuda para que empieces un cambio
 				saludable
 			</h2>
-			<p>Nuestros planes se basan de la extracción de tus datos con una ficha antropométrica, en donde te
+			<p>Nuestros planes se basan en el estudio de tus datos mediante una ficha antropométrica, en donde te
 				asignamos el plan de actividad física y el respectivo plan nutricional que te convenga. Permítenos ser
 				parte de este cambio.</p> <!--<div class='start-button-section'>-->
 			<a href="registro.php" class='start-button'>Empieza gratis</a>
