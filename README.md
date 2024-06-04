@@ -1,1 +1,2 @@
-![imagen](https://github.com/HAR0LDG/Healthy-Renewal-Web/assets/145815951/0b253f6e-96d4-43e1-908e-668f62f1c622)
+![imagen](https://github.com/HAR0LDG/Healthy-Renewal-Web/assets/145815951/72c8e2dc-7af5-40df-914e-2b32d5471717)
+
